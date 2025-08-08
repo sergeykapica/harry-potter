@@ -11,8 +11,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
 
-Swiper.use([Navigation, Pagination, Thumbs]);
-
 const snitchOptions = {
   type: "snitch",
   duration: 15,
@@ -28,10 +26,13 @@ const snitchOptions = {
   path: 'M 3 4 Q 4 5 5 4 Q 4 5 3 4 Q 4 4 5 4 T 17 2 Q 17 8 11 8 Q 3 6 4 1 T 16 9 Q 17.5 5 19 1 Q 11 2.5 3 4',
   imagePath: "/snitch.png",
   motionPath: {
+      path: "",
+      align: "",
       autoRotate: false,
       alignOrigin: [0.5, 0.5],
   },
   viewBox: "2.9 -0.488889 16.2 9.589",
+  timelines: [],
 };
 
 snitchOptions.motionPath.path = "#flight-path" + snitchOptions.type;
@@ -55,11 +56,14 @@ const catOptions = {
   path: 'M 16.297 8.439 L 10.658 8.426 L 12.563 8.426 Q 12.903 5.918 13.321 4.307 C 13.616 3.595 13.662 3.471 15.799 3.487 L 16.39 3.498 C 16.204 3.493 16.018 3.488 15.832 3.483 Q 15.1665 3.4985 14.501 3.514 T 13.51 3.885 Q 13.4245 4.102 13.339 4.319 T 12.782 6.858 Q 12.6735 7.64 12.565 8.422 C 11.9303 8.4273 11.2957 8.4327 10.661 8.438 L 16.297 8.438',
   imagePath: "/cat.png",
   motionPath: {
+      path: "",
+      align: "",
       autoRotate: false,
       alignOrigin: [0.5, 0.5],
   },
   viewBox: "8.9 2.08355 7.409 7.016",
   yoyo: true,
+  timelines: [],
 };
 
 catOptions.motionPath.path = "#flight-path" + catOptions.type;
@@ -82,6 +86,8 @@ const carOptions = {
   ease: `none`,
   path: 'M-2.92-6.925A1 1 0 0024.997-7.051L-2.92-6.925',
   motionPath: {
+      path: "",
+      align: "",
       autoRotate: false,
       alignOrigin: [0.5, 0.5],
   },
@@ -92,6 +98,7 @@ const carOptions = {
     '/forda2.png',
     '/forda3.png',
   ],
+  timelines: [],
 };
 
 carOptions.motionPath.path = "#flight-path" + carOptions.type;
@@ -110,10 +117,13 @@ const owlOptions = {
   path: 'M-1.853-1.255C.708.6183 1.416 1.2367 2.124 1.855 3.016 2.824 4.316 2.9 5.156 1.557 6.33 1.218 7.477 2.722 8.904 2.263 9.847 1.142 11.0967 1.9403 12.193 1.804 13.323 1.787 14.453 1.77 15.583 1.753 17.622 1.091 17.163 2.705 19.761 2.165S23.719 4.225 22.345 6.907Q15.889 6.902 14.257 6.469C13.2713 6.435 12.2857 6.401 11.3 6.367Q10.1785 5.615 9.836 4.259 8.932 3.029 7.858 1.316C6.001.677 4.746.231 3.769 1.159S2.846 4.464 1.971 4.94Q.62 6.265-1.776 5.959L-3.691 3.865C-2.184 2.289-4.476-2.415-1.802-1.255',
   imagePath: "/owl.png",
   motionPath: {
+      path: "",
+      align: "",
       autoRotate: false,
       alignOrigin: [0.5, 0.5],
   },
   viewBox: "-0.729 -0.1 17.48 7.74",
+  timelines: [],
 };
 
 owlOptions.motionPath.path = "#flight-path" + owlOptions.type;
@@ -149,6 +159,7 @@ export default function HeroSection() {
     let mainSwiper: Swiper | null = null;
 
     thumbsSwiper = new Swiper('.thumbs-slider', {
+      modules: [Navigation, Pagination, Thumbs],
       spaceBetween: 20,
       slidesPerView: 2,
       freeMode: true,
@@ -161,6 +172,7 @@ export default function HeroSection() {
     });
 
     mainSwiper = new Swiper('.slider-1', {
+      modules: [Navigation, Pagination, Thumbs],
       loop: true,
       navigation: {
         nextEl: '.swiper-button-next',

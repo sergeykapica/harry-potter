@@ -74,7 +74,7 @@ export default function FlyingObject({options}) {
     const el = rocketRef.current;
     const onHover = () => {
 
-      const currentScaleX = gsap.getProperty(el, "scaleX") || 1;
+      const currentScaleX = Number(gsap.getProperty(el, "scaleX")) || 1;
       const signX = Math.sign(currentScaleX) || 1;
 
       gsap.to(tween, { timeScale: 2, duration: 0.3 });
@@ -86,7 +86,7 @@ export default function FlyingObject({options}) {
     };
     const onLeave = () => {
 
-      const currentScaleX = gsap.getProperty(el, "scaleX") || 1;
+      const currentScaleX = Number(gsap.getProperty(el, "scaleX")) || 1;
       const signX = Math.sign(currentScaleX) || 1;
 
       gsap.to(tween, { timeScale: 1, duration: 0.3 });
