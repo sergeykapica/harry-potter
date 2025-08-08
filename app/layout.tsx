@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import HeaderMenu from './components/HeaderMenu';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +26,37 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <header className="header">
+          <div className="container pt-[10px] text-fog-grey-1">
+            <div className="inline-block w-full">
+              <div className="text-center lg:text-left lg:float-right">
+                <a href="#!" className="mr-[28px]">+7 450 434-34-34</a>
+                <a href="#!">Напишите нам</a>
+              </div>
+            </div>
+            <div className="flex items-center justify-between">
+                <a href="#!" className="shrink-0">
+                  <Image
+                    src="/logo.png"
+                    alt="Logo"
+                    width={175}
+                    height={95}
+                  />
+                </a>
+                <div className="flex items-center gap-[45px]">
+                  <HeaderMenu/>
+                  <a href="#!" className="button-1 !hidden lg:!inline-block">Связаться</a>
+                </div>
+            </div>
+          </div>
+        </header>
+        <main>
+          {children}
+        </main>
+        <footer>
+
+        </footer>
       </body>
     </html>
   );
