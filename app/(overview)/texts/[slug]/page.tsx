@@ -15,14 +15,15 @@ const bookList = {
 };
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
   searchParams: { page?: string };
 }
 
 // Динамическая генерация метаданных
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
-  const bookName = bookList[params.slug];
+  const {slug} = await params;
+  const bookName = bookList[slug];
 
   return {
     title: `Книга - ${bookName}`,
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function TextPage({ params, searchParams }: Props) {
-  const { slug } = params;
+  const {slug} = await params;
   const page = parseInt(searchParams.page || "1", 10) || 1;
   const pageSize = 20000;
 

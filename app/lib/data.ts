@@ -3,7 +3,7 @@ import {
   Professors,
 } from './definitions';
 
-let sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require', prepare: false });
+const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require', prepare: false });
 
 export async function fetchProfessors() {
   try {

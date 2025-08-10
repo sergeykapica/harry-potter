@@ -5,8 +5,11 @@ import { useEffect } from 'react';
 import Swiper from 'swiper';
 import 'swiper/css';
 import Link from 'next/link';
+import {
+  Professors,
+} from '@/app/lib/definitions';
 
-export function ProfessorItem({ professor }: { professor: any }) {
+export function ProfessorItem({ professor }: { professor: Professors }) {
   return (
     <div className="swiper-slide text-center">
       <Link href={`/professor/${professor.id}`} className="inline-block w-[150px] h-[150px] rounded-full border-[3px] border-yellow-1 overflow-hidden">
@@ -26,7 +29,7 @@ export function ProfessorItem({ professor }: { professor: any }) {
   );
 }
 
-export default function ProfessorsList({professors}: { professors: any }) {
+export default function ProfessorsList({professors}: { professors: Professors[] }) {
 
     useEffect(() => {
     
