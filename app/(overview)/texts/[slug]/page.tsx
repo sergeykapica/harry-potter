@@ -14,13 +14,8 @@ const bookList = {
     'harry-potter-and-the-dealthy-hallows': 'Гарри Поттер и дары смерти',
 };
 
-interface Props {
-  params: Promise<{ slug: string }>;
-  searchParams: { page?: string };
-}
-
 // Динамическая генерация метаданных
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
 
   const {slug} = await params;
   const bookName = bookList[slug];
@@ -35,9 +30,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function TextPage({ params, searchParams }: Props) {
-  const {slug} = await params;
-  const page = parseInt(searchParams.page || "1", 10) || 1;
+export default async function Page({ params }: { params: Promise<{ slug: string, page?: string }> }) {
+  const properties = await params;
+  const slug = properties.slug;
+  const page = parseInt(properties.page || "1", 10) || 1;
   const pageSize = 20000;
 
   // Путь к файлу
