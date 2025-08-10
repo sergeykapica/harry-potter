@@ -30,10 +30,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function Page({ params }: { params: Promise<{ slug: string, page?: string }> }) {
+export default async function Page({ params, searchParams }: { 
+  params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ page?: string }>;
+}) {
   const properties = await params;
+  const pageParams = await searchParams;
   const slug = properties.slug;
-  const page = parseInt(properties.page || "1", 10) || 1;
+  const page = parseInt(pageParams?.page || "1", 10) || 1;
   const pageSize = 20000;
 
   // Путь к файлу
