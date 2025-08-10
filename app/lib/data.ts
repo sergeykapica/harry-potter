@@ -8,7 +8,7 @@ const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require', prepare: false
 export async function fetchProfessors() {
   try {
     const professors = await sql<Professors[]>`
-      SELECT id, name, subject, image_url FROM professors
+      SELECT id, name, subject, image_url FROM public.professors
       ORDER BY name ASC
     `;
 
@@ -22,7 +22,7 @@ export async function fetchProfessors() {
 export async function fetchProfessorById(id: string) {
   try {
     const professor = await sql<Professors[]>`
-      SELECT id, name, subject, description, image_url FROM professors WHERE id = ${id}
+      SELECT id, name, subject, description, image_url FROM public.professors WHERE id = ${id}
     `;
 
     return professor;
