@@ -51,7 +51,8 @@ async function deleteRequests() {
 export async function GET() {
   try {
     await sql.begin(async (sqlTx) => {
-      //await seedRequests();
+      await seedProfessors();
+      await seedRequests();
     });
 
     return Response.json({ message: 'Database seeded successfully' });
