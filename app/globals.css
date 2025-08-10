@@ -28,6 +28,10 @@
   --foreground: #171717;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -57,6 +61,10 @@ body {
 
 .button-2 {
   @apply inline-block px-5 py-3 bg-blue-2 !text-white hover:bg-blue-1 transition-colors duration-150;
+}
+
+.button-3 {
+  @apply inline-block px-5 py-3 bg-transparent border-[2px] border-grey-1 !text-white hover:bg-yellow-1 hover:border-yellow-1 transition-colors duration-150;
 }
 
 a {
@@ -105,7 +113,7 @@ a {
 .thumbs-block:after {
   content: '';
   background-image: url('/thumbs-panel.jpg');
-  @apply block w-full h-[72px] bg-cover;
+  @apply block w-full h-[74px] bg-cover bg-no-repeat;
 }
 
 .slider-1 .swiper-pagination {
@@ -127,7 +135,7 @@ a {
 }
 
 .section__headline {
-  @apply text-xl text-grey-2 mb-2 text-center uppercase;
+  @apply text-xl text-grey-2 mb-2 text-center uppercase tracking-[.1em];
 }
 
 .section__description {
@@ -137,11 +145,6 @@ a {
 .section__description:after {
   content: '';
   @apply w-[40px] h-[3px] bg-blue-1 mx-auto table clear-both mt-2;
-}
-
-.section__faculties {
-  background-image: url('/section-faculties-bg-2.png');
-  @apply bg-cover;
 }
 
 .section__darked .section__headline {
@@ -154,4 +157,25 @@ a {
 
 .section__darked .section__description:after {
   @apply bg-yellow-1;
+}
+
+.section__detail-bg {
+  @apply absolute inset-0 bg-cover bg-center bg-[url('/alnwick-castle-wide.jpg')];
+}
+
+.section__detail-bg:after {
+  content: '';
+  @apply absolute inset-0 bg-blue-1/50;
+}
+
+/* Убираем стрелочки в Chrome, Edge, Safari */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Убираем стрелки в Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 const HeaderMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,11 +21,11 @@ const HeaderMenu = () => {
         id="menu"
       >
         <ul className="header__menu">
-          <li><a href="#!">Главная</a></li>
-          <li><a href="#!">Хогвартс</a></li>
-          <li><a href="#!">Факультеты</a></li>
-          <li><a href="#!">Преподаватели</a></li>
-          <li><a href="#!">Контакты</a></li>
+          <li><Link href="/">Главная</Link></li>
+          <li><Link href="/#section-hogwarts">Хогвартс</Link></li>
+          <li><Link href="/#section-faculties">Факультеты</Link></li>
+          <li><Link href="/#section-professors">Преподаватели</Link></li>
+          <li><Link href="/#section-books">Книги</Link></li>
         </ul>
       </nav>
 

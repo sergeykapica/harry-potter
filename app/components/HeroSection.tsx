@@ -196,11 +196,11 @@ export default function HeroSection() {
   return (
     <section className="hero-section">
 
-      <div className="swiper slider-1">
+      <div className="swiper slider-1 h-[600px] sm:h-[685px]">
 
-          <div className="swiper-wrapper">
+          <div className="swiper-wrapper !h-full">
 
-            <div className="swiper-slide relative pt-[205px] pb-[135px] overflow-hidden">
+            <div className="swiper-slide relative pt-[205px] pb-[70px] lg:pb-[135px] overflow-hidden h-full">
               <div className="swiper-slide-bg">
                 <Image
                   className="object-cover w-full h-full z-[-1]"
@@ -212,9 +212,9 @@ export default function HeroSection() {
               <div className="container relative z-30">
 
                 <div className="inline-block w-full">
-                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30">
-                      <h2 className="text-lg text-fog-grey-1 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-                      <p className="text-grey-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30 max-h-[350px]">
+                      <h1 className="text-lg text-white mb-2">Гарри Поттер</h1>
+                      <p className="text-grey-3">Волшебник, ставший знаменитым после того, как в младенчестве выжил при нападении Волан-де-Морта. Он носит шрам в форме молнии на лбу, очки и обладает большой смелостью, верностью друзьям и сильным чувством справедливости.</p>
                   </div>
                 </div>
               </div>
@@ -231,7 +231,7 @@ export default function HeroSection() {
               <FlyingObject options={snitchOptions}/>
             </div>
 
-            <div className="swiper-slide relative pt-[205px] pb-[135px] overflow-hidden">
+            <div className="swiper-slide relative pt-[205px] pb-[70px] lg:pb-[135px] overflow-hidden h-full">
               <div className="swiper-slide-bg">
                 <Image
                   className="object-cover w-full h-full z-[-1]"
@@ -242,9 +242,9 @@ export default function HeroSection() {
               </div>
               <div className="container relative z-30">
                 <div className="inline-block w-full">
-                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30">
-                      <h2 className="text-lg text-fog-grey-1 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-                      <p className="text-grey-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30 max-h-[350px]">
+                      <h2 className="text-lg text-white mb-2">Гермиона Грейнджер</h2>
+                      <p className="text-grey-3">Умная и целеустремлённая ученица Хогвартса, представительница факультета Гриффиндор. Родилась в семье магглов, но благодаря своему упорству и знаниям стала одной из самых талантливых ведьм своего поколения.</p>
                   </div>
                 </div>
               </div>
@@ -261,7 +261,7 @@ export default function HeroSection() {
               <FlyingObject options={catOptions}/>
             </div>
 
-            <div className="swiper-slide relative pt-[205px] pb-[135px] overflow-hidden">
+            <div className="swiper-slide relative pt-[205px] pb-[70px] lg:pb-[135px] overflow-hidden h-full">
               <div className="swiper-slide-bg">
                 <Image
                   className="object-cover w-full h-full z-[-1]"
@@ -272,9 +272,9 @@ export default function HeroSection() {
               </div>
               <div className="container relative z-30">
                 <div className="inline-block w-full">
-                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30">
-                      <h2 className="text-lg text-fog-grey-1 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-                      <p className="text-grey-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30 max-h-[350px]">
+                      <h2 className="text-lg text-white mb-2">Рон Уизли</h2>
+                      <p className="text-grey-3">Верный и преданный друг Гарри Поттера, ученик факультета Гриффиндор в Хогвартсе. Родился в большой и дружной семье волшебников Уизли, где царит любовь и поддержка. Рон отличается добрым сердцем, чувством юмора и храбростью.</p>
                   </div>
                 </div>
               </div>
@@ -291,7 +291,7 @@ export default function HeroSection() {
               <FlyingObject options={carOptions}/>
             </div>
 
-            <div className="swiper-slide relative pt-[205px] pb-[135px] overflow-hidden">
+            <div className="swiper-slide relative pt-[205px] pb-[70px] lg:pb-[135px] overflow-hidden h-full">
               <div className="swiper-slide-bg">
                 <Image
                   className="object-cover w-full h-full z-[-1]"
@@ -302,9 +302,9 @@ export default function HeroSection() {
               </div>
               <div className="container relative z-30">
                 <div className="inline-block w-full">
-                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30">
-                      <h2 className="text-lg text-fog-grey-1 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-                      <p className="text-grey-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30 max-h-[350px]">
+                      <h2 className="text-lg text-white mb-2">Джинни Уизли</h2>
+                      <p className="text-grey-3">Младшая сестра Рона и одна из талантливых ведьм факультета Гриффиндор в Хогвартсе. Она смелая, решительная и независимая, с ярким характером и живым умом. Проявляет стойкость и уверенность в сложных ситуациях.</p>
                   </div>
                 </div>
               </div>
@@ -347,7 +347,7 @@ export default function HeroSection() {
                     height={158}
                   />
                   <div className="bg-white/20 p-[10px] absolute bottom-0 inset-x-0">
-                    <p className="text-xs text-fog-grey-1">Lorem ipsum is placeholder text commonly used in the graphic</p>
+                    <p className="text-xs text-fog-grey-1">Гарри Поттер — волшебник, ставший знаменитым после того...</p>
                   </div>
               </div>
 
@@ -361,7 +361,7 @@ export default function HeroSection() {
                     height={158}
                   />
                   <div className="bg-white/20 p-[10px] absolute bottom-0 inset-x-0">
-                    <p className="text-xs text-fog-grey-1">Lorem ipsum is placeholder text commonly used in the graphic</p>
+                    <p className="text-xs text-fog-grey-1">Гермиона Грейнджер — Умная и целеустремлённая ученица...</p>
                   </div>
               </div>
 
@@ -375,7 +375,7 @@ export default function HeroSection() {
                     height={158}
                   />
                   <div className="bg-white/20 p-[10px] absolute bottom-0 inset-x-0">
-                    <p className="text-xs text-fog-grey-1">Lorem ipsum is placeholder text commonly used in the graphic</p>
+                    <p className="text-xs text-fog-grey-1">Рон Уизли — Верный и преданный друг Гарри Поттера...</p>
                   </div>
               </div>
 
@@ -389,7 +389,7 @@ export default function HeroSection() {
                     height={158}
                   />
                   <div className="bg-white/20 p-[10px] absolute bottom-0 inset-x-0">
-                    <p className="text-xs text-fog-grey-1">Lorem ipsum is placeholder text commonly used in the graphic</p>
+                    <p className="text-xs text-fog-grey-1">Джинни Уизли — Младшая сестра Рона и одна из талантливых...</p>
                   </div>
               </div>
 
