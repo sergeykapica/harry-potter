@@ -212,8 +212,8 @@ export default function HeroSection() {
               <div className="container relative z-30">
 
                 <div className="inline-block w-full">
-                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30 max-h-[350px]">
-                      <h1 className="text-lg text-white mb-2">Гарри Поттер</h1>
+                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30 max-h-[400px]">
+                      <h1 className="text-2xl text-white mb-2">Гарри Поттер</h1>
                       <p className="text-grey-3">Волшебник, ставший знаменитым после того, как в младенчестве выжил при нападении Волан-де-Морта. Он носит шрам в форме молнии на лбу, очки и обладает большой смелостью, верностью друзьям и сильным чувством справедливости.</p>
                   </div>
                 </div>
@@ -242,8 +242,8 @@ export default function HeroSection() {
               </div>
               <div className="container relative z-30">
                 <div className="inline-block w-full">
-                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30 max-h-[350px]">
-                      <h2 className="text-lg text-white mb-2">Гермиона Грейнджер</h2>
+                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30 max-h-[400px]">
+                      <h2 className="text-2xl text-white mb-2">Гермиона Грейнджер</h2>
                       <p className="text-grey-3">Умная и целеустремлённая ученица Хогвартса, представительница факультета Гриффиндор. Родилась в семье магглов, но благодаря своему упорству и знаниям стала одной из самых талантливых ведьм своего поколения.</p>
                   </div>
                 </div>
@@ -272,8 +272,8 @@ export default function HeroSection() {
               </div>
               <div className="container relative z-30">
                 <div className="inline-block w-full">
-                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30 max-h-[350px]">
-                      <h2 className="text-lg text-white mb-2">Рон Уизли</h2>
+                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30 max-h-[400px]">
+                      <h2 className="text-2xl text-white mb-2">Рон Уизли</h2>
                       <p className="text-grey-3">Верный и преданный друг Гарри Поттера, ученик факультета Гриффиндор в Хогвартсе. Родился в большой и дружной семье волшебников Уизли, где царит любовь и поддержка. Рон отличается добрым сердцем, чувством юмора и храбростью.</p>
                   </div>
                 </div>
@@ -302,8 +302,8 @@ export default function HeroSection() {
               </div>
               <div className="container relative z-30">
                 <div className="inline-block w-full">
-                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30 max-h-[350px]">
-                      <h2 className="text-lg text-white mb-2">Джинни Уизли</h2>
+                  <div className="float-right sm:w-[280px] pt-[30px] pb-[50px] px-5 bg-black/30 max-h-[400px]">
+                      <h2 className="text-2xl text-white mb-2">Джинни Уизли</h2>
                       <p className="text-grey-3">Младшая сестра Рона и одна из талантливых ведьм факультета Гриффиндор в Хогвартсе. Она смелая, решительная и независимая, с ярким характером и живым умом. Проявляет стойкость и уверенность в сложных ситуациях.</p>
                   </div>
                 </div>

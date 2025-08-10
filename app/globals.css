@@ -35,7 +35,8 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-libertinus-sans), sans-serif;
+  @apply text-lg;
 }
 
 .header {
@@ -44,7 +45,7 @@ body {
 }
 
 .header__menu {
-  @apply flex flex-col lg:flex-row gap-[28px] text-center lg:text-left text-3xl lg:text-base;
+  @apply flex flex-col lg:flex-row gap-4 lg:gap-[28px] text-center lg:text-left text-3xl lg:text-base;
 }
 
 #menu {
@@ -135,7 +136,7 @@ a {
 }
 
 .section__headline {
-  @apply text-xl text-grey-2 mb-2 text-center uppercase tracking-[.1em];
+  @apply text-xl text-grey-2 font-bold mb-2 text-center uppercase tracking-[.1em];
 }
 
 .section__description {

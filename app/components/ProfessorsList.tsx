@@ -24,7 +24,7 @@ export function ProfessorItem({ professor }: { professor: Professors }) {
       <Link href={`/professor/${professor.id}`} className="text-blue-1">
         <h4 className="mt-2 mb-1">{professor.name}</h4>
       </Link>
-      <p className="text-[14px] text-fog-grey-2">{professor.subject}</p>
+      <p className="text-[15px] text-fog-grey-2">{professor.subject}</p>
     </div>
   );
 }

@@ -1,19 +1,31 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from 'next/link';
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import HeaderMenu from './components/HeaderMenu';
 import LazyBackground from "./components/LazyBackground";
+import localFont from 'next/font/local'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const libertinus = localFont({
+  variable: "--font-libertinus-sans",
+  src: [
+    {
+      path: "./fonts/LibertinusSans/LibertinusSans-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/LibertinusSans/LibertinusSans-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "./fonts/LibertinusSans/LibertinusSans-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -28,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${libertinus.variable} antialiased`}>
         <header className="header">
           <div className="container pt-[10px] text-fog-grey-1">
             <div className="inline-block w-full">
@@ -69,7 +81,7 @@ export default function RootLayout({
               src="/footer-top-bg.jpg"
               className="footer__top pt-[40px] pb-[35px]"
             >
-            <div className="container grid md:grid-cols-4 gap-5 md:gap-[35px] text-[14px]">
+            <div className="container grid md:grid-cols-4 gap-5 md:gap-[35px] text-lg">
               <div className="text-center md:text-left">
                 <Link href="/">
                   <Image
@@ -98,7 +110,7 @@ export default function RootLayout({
               <div className="pt-[30px] flex justify-center text-center md:text-left">
                 <div className="block">
                   <h3 className="text-xl text-white mb-3">Авторство</h3>
-                  <p className="text-grey-1">Джоан Роулинг — британская писательница, ставшая всемирно известной благодаря серии книг о Гарри Поттере. Она является единственным автором этих произведений, полностью придумав и разработав их сюжет, персонажей и магический мир.</p>
+                  <p className="text-grey-1">Джоан Роулинг — британская писательница, ставшая всемирно известной благодаря серии книг о Гарри Поттере. Она является единственным автором этих произведений.</p>
                 </div>
               </div>
               <div className="pt-[30px] flex justify-center">
@@ -208,7 +220,7 @@ export default function RootLayout({
             </div>
           </LazyBackground>
           <div className="footer__bottom py-5 bg-[#12151a]">
-            <div className="container text-center text-[14px]">
+            <div className="container text-center text-lg">
                 <p className="text-grey-1">Все права защищены 2025 &copy; | Created by Marsel Firsov</p>
             </div>
           </div>

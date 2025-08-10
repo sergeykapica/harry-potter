@@ -3,6 +3,7 @@ import path from "path";
 import Breadcrumbs from '@/app/components/breadcrumbs';
 import { notFound } from 'next/navigation';
 import { Metadata } from "next";
+import Link from 'next/link';
 
 const bookList = {
     'harry-potter-and-the-philisopher-stone': 'Гарри Поттер и философский камень',
@@ -86,14 +87,14 @@ export default async function Page({ params, searchParams }: {
             <div className="flex flex-col sm:flex-row gap-5 sm:gap-0 items-center justify-between mt-5">
                 <div>
                     {page > 1 && (
-                    <a href={`?page=${page - 1}`} className="mr-5">
+                    <Link href={`?page=${page - 1}`} className="mr-5">
                         ← Предыдущая
-                    </a>
+                    </Link>
                     )}
                     {page < totalPages && (
-                    <a href={`?page=${page + 1}`}>
+                    <Link href={`?page=${page + 1}`}>
                         Следующая →
-                    </a>
+                    </Link>
                     )}
                 </div>
 

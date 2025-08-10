@@ -20,12 +20,12 @@ const HeaderMenu = () => {
         `}
         id="menu"
       >
-        <ul className="header__menu">
-          <li><Link href="/">Главная</Link></li>
-          <li><Link href="/#section-hogwarts">Хогвартс</Link></li>
-          <li><Link href="/#section-faculties">Факультеты</Link></li>
-          <li><Link href="/#section-professors">Преподаватели</Link></li>
-          <li><Link href="/#section-books">Книги</Link></li>
+        <ul className="header__menu text-lg">
+          <li><Link href="/" className='text-lg'>Главная</Link></li>
+          <li><Link href="/#section-hogwarts" className='text-lg'>Хогвартс</Link></li>
+          <li><Link href="/#section-faculties" className='text-lg'>Факультеты</Link></li>
+          <li><Link href="/#section-professors" className='text-lg'>Преподаватели</Link></li>
+          <li><Link href="/#section-books" className='text-lg'>Книги</Link></li>
         </ul>
       </nav>
 
