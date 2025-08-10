@@ -81,7 +81,7 @@ export default async function Page({ params, searchParams }: {
             </div>
         </div>
         <div className="container py-[50px]">
-            <h1 className="mb-4 text-2xl">Страница {page} из {totalPages}</h1>
+            <h1 className="mb-4 text-3xl">Страница {page} из {totalPages}</h1>
             <pre className="whitespace-pre-wrap">{pageContent}...</pre>
 
             <div className="flex flex-col sm:flex-row gap-5 sm:gap-0 items-center justify-between mt-5">
