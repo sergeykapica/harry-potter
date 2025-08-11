@@ -104,7 +104,7 @@ export default function Home() {
           className="section section__books section__darked py-[120px]"
         >
           <div className="container">
-              <h2 className="section__headline">Книги</h2>
+              <h2 className="section__headline !text-inherit lg:!text-white">Книги</h2>
               <p className="section__description">Знаменитая серия Дж. К. Роулинг о приключениях юного волшебника, его друзьях и борьбе со злом в мире магии.</p>
               <div className="flex flex-col justify-center gap-[30px] lg:gap-0 lg:block relative lg:h-[460px] text-center">
                 <Link

@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: `Книга - ${bookName}`,
       description: `Книга о волшебном мире и его обитателях - ${bookName}`,
+      images: ['/65_f7b6aced-59ec-4d5c-ba31-e34dcdbc9525_800x.webp'],
     },
   };
 }

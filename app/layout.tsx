@@ -31,6 +31,11 @@ const libertinus = localFont({
 export const metadata: Metadata = {
   title: "Гарри Поттер - фанатский сайт",
   description: "Здесь обитает дух Вселенной Гарри Поттера.",
+  openGraph: {
+    title: "Гарри Поттер - фанатский сайт",
+    description: "Здесь обитает дух Вселенной Гарри Поттера.",
+    images: ['/65_f7b6aced-59ec-4d5c-ba31-e34dcdbc9525_800x.webp'],
+  },
 };
 
 export default function RootLayout({
